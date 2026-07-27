@@ -1,0 +1,17 @@
+The board is complete and saved. Memory updated with the new learnings.
+
+## Zusammenfassung — AmpelKreuzungLernplatine (100×80 mm, 4-Lagen)
+
+**Gebaut:** Didaktische Straßenkreuzungs-Lernplatine. Schaltplan mit **allen 43 Bauteilen** (20× THT-LED `LED_D5.0mm` als Ampelkreuzung auf F.Cu, 20× SMD-Vorwiderstand `R_0805` 330 Ω auf B.Cu, 2× Bluepill-Sockel `PinSocket_1x20`, 1× RPi-Header `PinHeader_2x20`) und **31 Netzen** (10 Ansteuernetze je 2 LEDs + Bluepill-PAx/PBx + korrekt gemappte RPi-GPIO-Pins, 20 Kathodennetze, GND mit 25 Pins) — netzlistig verifiziert.
+
+**Wirklich alle Bauteile platziert:** Ja — alle 43 überlappungsfrei im Umriss (per Render visuell geprüft): Bluepill-Sockel links (x8/x30.86, 0.9″), LED-Ampelgruppen als vertikale 3er-Stacks (x44/x74) + Fußgänger-Paare Mitte, Widerstände in den freien Rückseiten-Spalten, RPi-Header rechts. `suggest_placement` bewusst übersprungen (Spec-Koordinaten kollidierten; per move_component sauber platziert — kein courtyard-Loop, kein Hängen).
+
+**Stackup:** 4 Lagen F.Cu/In1.Cu/In2.Cu/B.Cu; In1+In2 beide als durchgehende **GND-Plane** (`power`-Typ, kein separates Versorgungsnetz vorhanden, da LEDs direkt per GPIO getrieben). **20 GND-Vias** an jedem SMD-Widerstands-GND-Pad (Step 1c) → alle GND-Pads verbunden, DRC vor dem Routing ohne unconnected.
+
+**Routing:** MCP-`autoroute` (synchron, 8.2 s), 206 Tracks / 33 Vias, **alle 30 Signalnetze auf F/B.Cu geroutet (0.4 mm)**, GND über die Planes. SES automatisch importiert.
+
+**DRC-Status:** **0 Fehler**, 42 Warnungen (2 Freerouting-Redundanz-Stubs `track_dangling`, 4 MountingHole-Lib-Nag, 36 Silk — alle kosmetisch/DFM-akzeptabel).
+
+**Gerber:** nicht selbst exportiert (läuft laut Auftrag danach automatisch via kicad-cli). **.kicad_pcb mit Routing + gefüllten Planes gespeichert.**
+
+**Offene Punkte:** dekorative Straßen-/Zebrastreifen-Grafik (Spec §5) nur als Ampelgruppen-Beschriftung umgesetzt (gestrichelte Mittellinien/Zebra ausgelassen, da reine Silk-Kosmetik + Datei-Edit-Risiko); die 2 `track_dangling` bewusst belassen (Löschen riskiert Worker-Absturz, 0 Fehler-Nutzen).

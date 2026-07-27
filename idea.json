@@ -1,0 +1,9 @@
+{
+  "board_name": "AmpelKreuzungLernplatine",
+  "one_liner": "Eine didaktische Straßenkreuzungs-Lernplatine mit 20 THT-LEDs und integrierter Straßen-Grafik, wahlweise steuerbar per STM32 Bluepill oder Raspberry Pi.",
+  "market_gap": "Es gibt kaum günstige, ansprechende Hardware-Simulatoren für Ampelsteuerungen, die ohne Kabelsalat direkt STM32-C++ und Raspberry-Pi-Python-Lehrinhalte auf einer optisch ansprechenden Straßenkarte vereinen.",
+  "confidence": "high",
+  "price_eur": 19,
+  "target_enclosure": "100x80mm Eurocard-Halterung / Tischaufsteller / Acryl-Sandwich",
+  "injection_notes": "keine"
+}
