@@ -1,4 +1,4 @@
-# License — 2026-07-27-ampelkreuzunglernplatine (Hardware)
+# License — 2026-07-27-TrafficLightLearningBoard (Hardware)
 
 **Commercial, source-available. Not open source.**
 

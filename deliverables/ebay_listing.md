@@ -1,4 +1,4 @@
-# AmpelKreuzungLernplatine - Leerplatine fuer STM32 Bluepill (unbestueckt/teilbestueckt, Bausatz-Basis)
+# Traffic Light Learning Board - Leerplatine fuer STM32 Bluepill (unbestueckt/teilbestueckt, Bausatz-Basis)
 
 Eine didaktische Straßenkreuzungs-Lernplatine mit 20 THT-LEDs und integrierter Straßen-Grafik, wahlweise steuerbar per STM32 Bluepill oder Raspberry Pi.
 

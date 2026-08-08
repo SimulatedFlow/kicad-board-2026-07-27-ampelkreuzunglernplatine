@@ -1,4 +1,4 @@
-# 2026-07-27-ampelkreuzunglernplatine
+# 2026-07-27-TrafficLightLearningBoard
 
 <!-- SF-STORE-BLOCK:BEGIN -->
 ## 🛒 Source-available — see before you buy
